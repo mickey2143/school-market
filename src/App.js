@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import {RenderUI} from "./components/renderUI";
+import Searchbar from "./components/Searchbar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export function App() {
+  const [loading,updateLoad] =useState(false)
+  const [gitUser,newSearch] = useState(null)
+  const search = (username)=>{
+ fetch(`https://api.github.com/users/${username}`)
+ .then((res)=>{
+  updateLoad(true)
+  return res.json()
+})
+.then((data)=>{
+  
+  updateLoad(false)
+  newSearch(data)
+})
+
 }
+  
+ 
+  return (
+    <>
 
-export default App;
+    <Searchbar search={(e)=>{
+      search(e)}} />
+
+    <RenderUI  user = {gitUser} loading = {loading}/>
+    
+    </>
+  )
+}
