@@ -1,9 +1,6 @@
-export const RenderUI = function ({user,loading}) {
-  console.log(user)
-  if(!user){
-    return <h1 className="text-center">Loading...</h1>
-  }else{
+export const RenderUI = function ({user}) {
 
+  if(!user)return 
     return (
       <div>
         <span className="profile center mt-4">
@@ -71,8 +68,7 @@ export const RenderUI = function ({user,loading}) {
       </div>
     );
 
-  }
-  
+    
  
 };
 
