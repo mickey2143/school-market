@@ -1,0 +1,10 @@
+button{
+    padding: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.primary{
+    background-color: #4f005f;
+    color: #fff;
+}
