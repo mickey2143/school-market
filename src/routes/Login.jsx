@@ -1,13 +1,18 @@
+import { Link } from "react-router-dom"
+
+
 function Login(){
     return(
         <div className="cover">
-    <div className="form-box ">
+    <div className="form-box">
         <div className="model-detail">
+        <Link to={"/"}>
             <span className="close" >
                 <svg id="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-                  </svg>
+                </svg>
             </span>
+        </Link>
             <p>Login/Signup</p>
         </div>
     
@@ -26,6 +31,8 @@ function Login(){
             <label for="password">Password</label>
             <input type="password" name="" id="password"  required />
         </div>
+
+        <p>Sign up</p>
     
         <button type="submit">Submit</button>
     </form> 

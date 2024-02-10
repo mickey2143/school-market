@@ -1,10 +1,26 @@
+import Products from "../components/products/products"
+import Button from "../components/libs/button"
+import { useState } from "react"
+
 function BusinessProfile(){
+    const [prodVisib,setprodVisib] = useState(false)
+
+
     return(
+        <>
+        {(prodVisib)?(<div className="flex items-center justify-center fixed bg-black opacity-40 w-full h-full">
+        <Products />
+    </div>):("")}
         
        <main >
+
             <div class="title">
-                <h1>Mona's Kitchen</h1>
-                <button>View Products</button>
+                <h1 className="text-3xl">Mona's Kitchen</h1>
+                <Button 
+                text={"View Products"}
+                handleClick={()=>{setprodVisib(true)}}
+                />
+                
             </div>
              <div class="product-img">
                 <div class="main-img">
@@ -123,7 +139,7 @@ function BusinessProfile(){
                 </div>
              </div>
        </main>
-      
+       </>
     )
 }
 

@@ -16,15 +16,24 @@ nav{
     font-size: 1.5rem;
 }
 nav ul{
-    width: 50%;
+    width: 55%;
     display: flex;
     justify-content: space-between;
     list-style: none;
 
 }
+nav ul li:hover{
+    font-size: 1.1rem;
+    transition: all linear .25s;
+}
+
 nav .ham{
    display: none;
-right: 0;
 width: 35px;
 height: 35px;
+position: relative;
+}
+nav .ham svg{
+   right: 0;
+position: absolute;
 }
