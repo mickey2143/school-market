@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import FormInput from "../components/libs/FormInput"
-import { Component, useState } from "react"
+import { Component} from "react"
 
 class Signup extends Component{
     constructor(){

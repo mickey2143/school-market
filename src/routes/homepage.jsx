@@ -1,5 +1,4 @@
 import { Component } from "react";
-import Nav from "../components/nav/nav.comp";
 import SearchBox from "../components/search-box/search.comp";
 import CardList from "../components/cardList/cardList.comp"
 

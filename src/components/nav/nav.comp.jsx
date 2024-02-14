@@ -17,7 +17,7 @@ function Nav(){
             <li><a href="/">Catalogue</a></li>
             <li><Link to="/register">Open a Business Profile</Link></li>
             <li><Link to={"/login"}>Login in</Link></li>
-            <li><a href="#">Report</a></li>
+            <li><Link to={"/login"}>Report</Link></li>
         </ul>
 
         <span className="ham" onClick={handleNav}>

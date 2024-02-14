@@ -8,9 +8,7 @@ function BusinessProfile(){
 
     return(
         <>
-        {(prodVisib)?(<div className="flex items-center justify-center fixed bg-black opacity-40 w-full h-full">
-        <Products />
-    </div>):("")}
+        {(prodVisib)?(<Products handleClick={()=>{setprodVisib(false)}} />):("")}
         
        <main >
 
@@ -48,19 +46,19 @@ function BusinessProfile(){
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum temporibus officiis facere sequi mollitia dolorem beatae atque voluptate deserunt repudiandae nesciunt magni, blanditiis inventore placeat eum consequuntur amet. Laborum, minima.</p>
                 </div>
                 <div class="contact">
-                    <a href="#">
+                    <a href="https:facebook.com">
                         <img src="../icons/facebook.svg" alt="" />
                         <p>@facebook.com</p>
                     </a>
-                    <a href="#">
+                    <a href="https:facebook.com">
                         <img src="../icons/instagram.svg" alt="" />
                         <p>@facebook.com</p>
                     </a>
-                    <a href="#">
+                    <a href="https:facebook.com">
                         <img src="../icons/twitter.svg" alt="" />
                         <p>@facebook.com</p>
                     </a>
-                    <a href="mailto:">
+                    <a href="mailto:animichael@gmail.com">
                         <img src="../icons/mail.svg" alt="" />
                         <p>@gmail.com</p>
                     </a>
